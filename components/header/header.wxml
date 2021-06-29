@@ -1,0 +1,15 @@
+<view class="header" style="height:{{header.height}}px">
+  
+  <view class="background" style="opacity: {{opacity}};background: {{bg}}">
+    <view style="height:{{header.height - header.top}}px;margin-top:{{header.top}}px">
+      <slot></slot>
+    </view>
+  </view>
+
+  <view class="lefticon" style="bottom:{{header.margin + 2}}px">
+    <view class="iconfont iconback" bindtap="backTo"></view>
+    |
+    <view class="iconfont iconzhuye"></view>
+  </view>
+
+</view>

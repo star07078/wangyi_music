@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class="header">
+  <view>
+    <icon class="iconfont iconsousuo"></icon>
+    <input class="search" value='{{value}}' placeholder="搜索你想听得歌曲" focus="true" bindinput="bindKeyInput" />
+    <icon class="iconfont iconround_delete" style="position:absolute; right: 20rpx;" bindtap="clearValue" wx:if="{{value}}"></icon>
+  </view>
+  <!-- <text wx:if="{{value.length}}">搜索</text>
+  <text wx:else bindtap=>取消</text> -->
+</view>
+
+<scroll-view class="scroll" wx:if="{{!value.length}}">
+  <view>
+    <view class="title" wx:if="{{history.length}}">
+      搜索历史
+      <icon style="float:right;" class="iconfont iconshanchu" bindtap="clear"></icon>
+      <view class="history">
+          <text wx:for="{{history}}" wx:key="index" bindtap="changValue" data-value="{{item}}">{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="title">热搜列表</view>
+    <view class="hot" wx:for="{{hot}}" wx:key="index" bindtap="changValue" data-value="{{item.searchWord}}">
+      <text class="hotindex" style="color:{{index < 3 ? 'red' : '#000'}}">{{index+1}}</text>{{item.searchWord}}
+    </view>
+  </view>
+</scroll-view>
+
+<scroll-view class="searchsong" wx:else height="100%;" scroll-y="true">
+  <view class="sousuo">
+    搜索"<text>{{value}}</text>"
+  </view>
+  <view class="list" wx:for="{{searchList}}" wx:key="index" bindtap="tolyrics" data-id="{{item.id}}" data-title="{{item.name}}" data-imgsrc="{{item.artists[0].img1v1Url}}">
+    <icon class="iconfont iconsousuo"></icon>{{item.name}} -- {{item.artists[0].name}}
+  </view>
+</scroll-view>

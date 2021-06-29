@@ -1,0 +1,19 @@
+/* pages/singerList/singerList.wxss */
+page{
+  width: 660rpx;
+  margin: 20rpx auto 0;
+}
+.singer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item view{
+  margin: 10rpx 0 20rpx;
+}
+.item image{
+  width: 290rpx;
+  height: 290rpx;
+  border-radius: 20rpx;
+}

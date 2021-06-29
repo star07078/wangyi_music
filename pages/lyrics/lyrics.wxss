@@ -1,0 +1,110 @@
+/* pages/lyrics/lyrics.wxss */
+@import '../../iconfont.wxss';
+.page{
+  height: 100%;
+}
+.bg, .filter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.bg{
+  z-index: 1;
+  filter: blur(20px);
+}
+.filter{
+  z-index: 2;
+  background: linear-gradient(to bottom, #242730, rgba(36,39,48,0.7), rgba(36,39,48,0.2), rgba(36,39,48,0.5));
+}
+.songmsg{
+  position: relative;
+  z-index: 20;
+}
+.switch{
+  height: 110rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.switch .wangyi{
+  font-size: 40rpx;
+  font-weight: 800;
+}
+.switch .icon{
+  width: 180rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+}
+.switch .iconfont{
+  flex-grow: 1;
+  text-align: center;
+}
+
+.img{
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50%;
+  margin: 30rpx auto;
+  border: 20rpx solid rgba(255,255,255,0.3);
+  position: relative;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate 14s linear infinite;
+}
+.animation{
+  animation: rotate 14s linear infinite;
+}
+.img .icon{
+  text-align: center;
+  line-height: 100%;
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  top: 180rpx;
+  left: 180rpx;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+}
+.img .icon .iconfont{
+  font-size: 70rpx;
+  color: #fff;
+  line-height: 140rpx;
+}
+.lyrics{
+  width: 100%;
+  margin-top: 80rpx;
+  height: 250rpx;
+  text-align: center;
+}
+.lyrics view{
+  line-height: 80rpx;
+}
+.alllyrics{
+  position: relative;
+  z-index: 5;
+  height: 60vh;
+  margin-top: 10vh;
+}
+.alllrc{
+  text-align: center;
+  height: 100%;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

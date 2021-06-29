@@ -1,0 +1,58 @@
+/* components/playmusic/playmusic.wxss */
+@import '../../iconfont.wxss';
+.playmusic{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 10;
+  /* border-top: 1px solid #000; */
+}
+.song{
+  display: flex;
+  flex: 0 0 460rpx;
+  padding-left: 20rpx;
+  flex-direction: row;
+  align-items: center;
+}
+.song image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: -20rpx;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.song text{
+  margin-left: 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 360rpx;
+}
+
+.switch{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  margin-right: 30rpx;
+  align-items: center;
+}
+.switch icon{
+  flex-grow: 1;
+  font-size: 50rpx;
+}
+.switch .size{
+  font-size: 65rpx;
+}

@@ -1,0 +1,96 @@
+/* pages/musicList/musicList.wxss */
+@import '../../iconfont.wxss';
+.top{
+  height: 40vh;
+  background: #ccc;
+  overflow: hidden;
+}
+.top .circle{
+  width: 350rpx;
+  height: 350rpx;
+  background: #eee;
+  margin: calc(20vh - 175rpx) auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+.circle .wangyi{
+  font-size: 36rpx;
+  line-height: 56rpx;
+}
+.circle .title{
+  font-size: 60rpx;
+}
+.list{
+  border-top-right-radius: 30rpx; 
+  border-top-left-radius: 30rpx; 
+  margin-top: -30rpx;
+  background: #fff;
+  padding: 20rpx 0;
+  /* height: 100%; */
+}
+
+.musiclist{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50rpx 0;
+}
+.index{
+  flex: 0 1 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #a2a1af;
+}
+.iconfont{
+  flex: 0 1 130rpx;
+  font-size: 65rpx;
+  color: #c4c9dc;
+  text-align: left;
+}
+.song{
+  flex-grow: 1;
+}
+.songname{
+  font-size: 34rpx;
+  width: 500rpx;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.songmsg{
+  font-size: 26rpx;
+  color: #a8a9ae;
+  line-height: 50rpx;
+}
+
+.beat{
+  width: 55rpx;
+  height: 40rpx;
+  margin: 0 auto;
+  display: flex;
+}
+.beat icon{
+  width: 6rpx;
+  height: 40rpx;
+  margin: 0 3rpx;
+  background: #ffe41b;
+}
+@keyframes beat{
+  0%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  50%{
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}

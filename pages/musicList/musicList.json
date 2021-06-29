@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header": "/components/header/header",
+    "playAllSong": "/components/playAllSong/playAllSong"
+  },
+  "navigationStyle": "custom"
+}

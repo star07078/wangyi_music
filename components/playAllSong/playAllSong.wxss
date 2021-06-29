@@ -1,0 +1,29 @@
+/* components/playallsong/playallsong.wxss */
+@import '../../iconfont.wxss';
+.playallsong{
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.msg{
+  flex: 0 0 450rpx;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 50rpx;
+}
+.playall{
+  width: 200rpx;
+  height: 40px;
+  border-radius: 20px;
+  background: #ffe41b;
+  font-size: 13px;
+  font-weight: 600;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 3rpx;
+}
+.playall .iconfont{
+  font-size: 30px;
+  margin: 0 5rpx 0 10rpx;
+}

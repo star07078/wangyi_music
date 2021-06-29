@@ -1,0 +1,23 @@
+<!-- <header /> -->
+  <playAllSong bindtap="playAll">
+    <view>最近播放{{obj.length}}首</view>
+  </playAllSong>
+
+  <view style="text-align:center; line-height:100rpx" wx:if="{{!obj.length}}">暂无播放记录</view>
+
+  <view class="musiclist" wx:for="{{obj}}" wx:key="index" bindtap="tolyrics" data-id="{{item.id}}" data-title="{{item.name}}" data-imgsrc="{{item.picUrl}}">
+    <view class="index">
+      <view wx:if="{{item.id != id}}">{{index + 1}}</view>
+      <view class="beat" wx:else>
+        <icon style="animation: beat 1.2s linear infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.3s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.1s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.5s infinite;"></icon>
+      </view>
+    </view>
+    <view class="song">
+      <view class="songname">{{item.name}}{{app}}</view>
+      <view class="songmsg">{{item.ar[0].name || item.song.artists[0].name}}</view>
+    </view>
+    <view class="iconfont {{item.id == id ? 'iconPlaybofang' : 'iconPausezanting'}}" catchtap="playSong" data-id="{{item.id}}" data-title="{{item.name}}"></view>
+  </view>

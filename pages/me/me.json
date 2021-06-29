@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "playAllSong": "/components/playAllSong/playAllSong"
+  }
+}

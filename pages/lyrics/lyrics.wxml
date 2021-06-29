@@ -1,0 +1,31 @@
+<!--pages/lyrics/lyrics.wxml-->
+<!-- <text>pages/lyrics/lyrics.wxml</text> -->
+<header>
+  <view style="color: #fff;">{{title}}</view>
+</header>
+<view class="page" style="padding-top:{{topHeight}}px;">
+  <view class="bg" style="background:url({{imgsrc}});background-size:100% 100%;"></view>
+  <view class="filter"></view>
+  <view class="songmsg">
+    <view class="switch">
+      <text class="wangyi">网易云音乐</text>
+      <view class="icon">
+        <text class="iconfont iconSanMiAppoutlinei1" bindtap="up"></text>
+        |
+        <text class="iconfont iconSanMiAppoutlinei" bindtap="down"></text>
+      </view>
+    </view>
+    <view class="img">
+      <image src="{{imgsrc}}" style="animation-play-state: {{isPlay ? 'running' : 'paused'}}"></image>
+      <!-- <image src="{{imgsrc}}" animation="{{isPlay && animationData}}"></image> -->
+      <view class="icon" bindtap="pause">
+        <icon class='iconfont {{isPlay ? "iconzanting1" : "iconbofang"}}'></icon>
+      </view>
+    </view>
+    <scroll-view class="lyrics" scroll-into-view="{{topCurrentLrc}}" scroll-y="true"  scroll-with-animation="true">
+      <view wx:for="{{lrc}}" wx:key="index" id="el-{{index}}" class="margintop" style="color:{{currentLrc == 'el-'+index ? 'orange' : '#000'}}">
+        {{lrc[index]}}
+      </view>
+    </scroll-view>
+  </view>
+</view>

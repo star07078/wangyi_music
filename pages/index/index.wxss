@@ -1,0 +1,120 @@
+/* pages/index/index.wxss */
+@import '../../iconfont.wxss';
+page{
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.search{
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #f0f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  color: #9a9da4;
+}
+.search .iconfont{
+  font-size: 40rpx;
+  margin: 0 10rpx;
+}
+.toptitle{
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.title{
+  font-size: 46rpx;
+  font-weight: 800;
+}
+.more{
+  color: #9fa2a9;
+  float: right;
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item{
+  display: flex;
+  width: 200rpx;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+}
+.img{
+  position: relative;
+}
+.img .iconfont{
+  position: absolute;
+  bottom: 24rpx;
+  right: 14rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 6rpx;
+  border-radius: 50%;
+}
+.img image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.songname{
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.author{
+  font-size: 20rpx;
+  color: #a2a1af;
+  line-height: 30rpx;
+}
+
+.rankinglist{
+  background: #fff;
+  border-radius: 20rpx;
+  height: 240rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.rankinglist .img{
+  width: 240rpx;
+  height: 240rpx;
+  flex: 0 0 240rpx;
+  color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rankinglist .img .wangyi{
+  font-size: 24rpx;
+  line-height: 46rpx;
+}
+.rankinglist .img .title{
+  font-size: 38rpx;
+  line-height: 60rpx;
+  transform: scaleY(1.3);
+  letter-spacing: 6rpx;
+}
+.rankingmsg{
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.rankingmsg .rankingtitle{
+  font-size: 30rpx;
+  font-weight: 800;
+  line-height: 50rpx;
+}
+.rankingmsg .text{
+  font-size: 20rpx;
+  line-height: 38rpx;
+  color: #aaa9ae;
+}

@@ -1,0 +1,11 @@
+<view class="playmusic">
+  <view class="song">
+    <image src="{{imgsrc}}" style="animation-play-state: {{isPlay ? 'running' : 'paused'}}"></image>
+    <text>{{title}}</text>
+  </view>
+  <view class="switch">
+    <icon class="iconfont iconai10"></icon>
+    <icon class="iconfont {{isPlay ? 'iconPlaybofang' : 'iconPausezanting'}} size" bindtap="pause"></icon>
+    <icon class="iconfont iconai09"></icon>
+  </view>
+</view>

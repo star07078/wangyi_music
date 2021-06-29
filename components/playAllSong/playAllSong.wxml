@@ -1,0 +1,10 @@
+<view class="playallsong">
+  <!-- <text></text> -->
+  <view class="msg">
+    <slot></slot>
+  </view>
+  <view class="playall">
+    <icon class="iconfont iconPausezanting"></icon>
+    播放全部
+  </view>
+</view>

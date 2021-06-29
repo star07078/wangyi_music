@@ -1,0 +1,40 @@
+<!--pages/hot/hot.wxml-->
+<scroll-view  lower-threshold="50" scroll-y="true" style="height: 100vh" bindscrolltolower="bottomfn">
+<view class="top">
+  <view class="msg">
+    <image src='{{imgsrc}}'></image>
+    <view bindtap="showToast">
+      <icon class="iconfont iconjianjie"></icon>
+      <view>简介</view>
+    </view>
+  </view>
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="bg filter"></view>
+  <view class="bg blur" style="background: url('{{imgsrc}}'); background-size: 100%;">
+  </view>
+</view>
+<view class="list">
+  <playAllSong bindtap="playAll">
+    <view>共{{allList.length}}首歌</view>
+  </playAllSong>
+  <!-- <musicItem wx:for="{{list}}"  wx:key="index"  item="{{item}}" key="{{index + 1}}" id="{{item.id}}" /> -->
+  <view class="musiclist" wx:for="{{list}}" wx:key="index" bindtap="tolyrics" data-id="{{item.id}}" data-title="{{item.name}}" data-imgsrc="{{item.al.picUrl}}" data-index="{{index}}">
+    <view class="index">
+      <view wx:if="{{item.id != id}}">{{index + 1}}</view>
+      <view class="beat" wx:else>
+        <icon style="animation: beat 1.2s linear infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.3s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.1s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.5s infinite;"></icon>
+      </view>
+    </view>
+    <view class="song">
+      <view class="songname">{{item.name}}{{app}}</view>
+      <view class="songmsg">{{item.ar[0].name || item.song.artists[0].name}}</view>
+    </view>
+    <view class="iconfont {{item.id == id ? 'iconPlaybofang' : 'iconPausezanting'}}" catchtap="playSong" data-id="{{item.id}}" data-title="{{item.name}}" data-index="{{index}}"></view>
+  </view>
+</view>
+</scroll-view>

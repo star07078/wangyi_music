@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bottomPlayMusic": "/components/bottomPlayMusic/bottomPlayMusic"
+  }
+}

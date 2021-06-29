@@ -1,0 +1,74 @@
+<view class="search" bindtap="sreach">
+  <icon class="iconfont iconsousuo"></icon>
+  <text>搜索你想听得音乐</text>
+</view>
+
+<view class="sort">
+    <view class="toptitle">
+      <text class="title">{{newSong.title}}</text>
+      <text class="more" bind:tap="newSongData" data-n='3'>更多></text>
+    </view>
+    <view class="list">
+      <view class="item" wx:for="{{newSong.list}}" wx:key="index">
+        <view class="img" bindtap="tolyrics" data-index="{{index}}" data-id="{{item.id}}" data-imgsrc="{{item.picUrl}}" data-title="{{item.name}}">
+          <image src="../../images/me.png" hidden="{{show1[index] ? true : false}}"></image>
+          <image src="{{item.picUrl}}" data-num="{{index}}" data-show="show1" bindload='show' hidden="{{show1[index] ? false : true}}"></image>
+          <view class="iconfont {{id == item.id && nowPlay ? 'iconzanting1' : 'iconbofang'}}" catchtap="playSong" data-id="{{item.id}}" data-title="{{item.name}}" data-imgsrc="{{item.picUrl}}" data-index="{{index}}"></view>
+        </view>
+        <text class="songname">{{item.name}}</text>
+        <text class="author">{{item.song.artists[0].name}}</text>
+      </view>
+    </view>
+  </view>
+
+<view class="sort">
+  <view class="toptitle">
+    <text class="title">{{singer.title}}</text>
+    <text class="more" bind:tap="singerData">更多></text>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{singer.list}}" wx:key="index" data-imgsrc="{{item.picUrl}}" data-id="{{item.id}}" data-type="singer" bindtap="toHot">
+      <view class="img">
+        <image src="../../images/me.png" hidden="{{show2[index] ? true : false}}"></image>
+        <image src="{{item.picUrl}}" data-num="{{index}}" data-show="show2" bindload='show' hidden="{{show2[index] ? false : true}}"></image>
+      </view>
+      <text class="songname">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="sort">
+  <view class="toptitle">
+    <text class="title">{{songList.title}}</text>
+    <text class="more" bind:tap="songListData">更多></text>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{songList.list}}" wx:key="index" data-id="{{item.id}}" data-type="songList" bindtap="toHot" data-imgsrc="{{item.coverImgUrl}}">
+      <view class="img">
+        <image src="../../images/me.png" hidden="{{show3[index] ? true : false}}"></image>
+        <image src="{{item.coverImgUrl}}" data-num="{{index}}" data-show="show3" bindload='show' hidden="{{show3[index] ? false : true}}"></image>
+      </view>
+      <text class="songname">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+ <view style="margin-bottom: 70rpx">
+  <view class="toptitle">
+    <text class="title">排行榜</text>
+  </view>
+  <view class="rankinglist" wx:for="{{ranking}}" wx:key="index" bindtap="newSongData" data-n='{{index}}'>
+      <view class="img" style="background: linear-gradient(to bottom, {{item.color[0]}}, {{item.color[1]}})">
+        <view class="wangyi">wangyi music</view>
+        <view class="title">{{item.title}}</view>
+      </view>
+      <view class="rankingmsg">
+        <text class="rankingtitle">{{item.title}}></text>
+        <view class="text" wx:for="{{item.list}}" wx:key="index">
+          {{index}}. {{item.name}}
+        </view>
+      </view>
+  </view>
+</view>
+
+<!-- <bottomPlayMusic imgsrc="{{imgsrc}}" title="{{title}}" wx:if="{{ isShow }}"/> -->

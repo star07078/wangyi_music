@@ -1,0 +1,68 @@
+/* pages/me/me.wxss */
+@import '../../iconfont.wxss';
+.songlist{
+  padding: 50rpx 0;
+}
+
+
+.musiclist{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50rpx 0;
+}
+.index{
+  flex: 0 1 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #a2a1af;
+}
+.iconfont{
+  flex: 0 1 130rpx;
+  font-size: 65rpx;
+  color: #c4c9dc;
+  text-align: left;
+}
+.song{
+  flex-grow: 1;
+}
+.songname{
+  font-size: 34rpx;
+  width: 500rpx;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.songmsg{
+  font-size: 26rpx;
+  color: #a8a9ae;
+  line-height: 50rpx;
+}
+
+.beat{
+  width: 55rpx;
+  height: 40rpx;
+  margin: 0 auto;
+  display: flex;
+}
+.beat icon{
+  width: 6rpx;
+  height: 40rpx;
+  margin: 0 3rpx;
+  background: #ffe41b;
+}
+@keyframes beat{
+  0%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  50%{
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}

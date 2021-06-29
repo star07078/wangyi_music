@@ -1,0 +1,136 @@
+/* pages/hot/hot.wxss */
+@import '../../iconfont.wxss';
+.top{
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  background-size: 100%;
+  padding: 0 50rpx;
+}
+.top .bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /* background:linear-gradient(to bottom, #242730, transparent, rgba(36,39,48,0.5)); */
+}
+.top .filter{
+  background:linear-gradient(to bottom, #242730, rgba(36,39,48,0.7), rgba(36,39,48,0.2), rgba(36,39,48,0.5));
+  z-index: 2;
+}
+.top .blur{
+  filter: blur(20px) grayscale(20%);
+}
+.top .msg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40rpx 0;
+  position: relative;
+  z-index: 10;
+}
+.msg image{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 30rpx;
+}
+.title{
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+}
+.msg view{
+  flex-basis: 300rpx;
+  text-align: center;
+}
+.msg view .iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50%;
+  font-size: 46rpx;
+  margin-bottom: 20rpx;
+  background: rgba(255,255,255,0.2);
+}
+.list{
+  border-top-right-radius: 30rpx; 
+  border-top-left-radius: 30rpx; 
+  position: relative;
+  top: -30rpx;
+  background: #fff;
+  padding: 20rpx 0;
+  z-index: 30;
+}
+
+
+.musiclist{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50rpx 0;
+}
+.index{
+  flex: 0 1 100rpx;
+  text-align: center;
+}
+.index{
+  font-size: 40rpx;
+  color: #a2a1af;
+}
+.iconfont{
+  flex: 0 1 130rpx;
+  font-size: 65rpx;
+  color: #c4c9dc;
+  text-align: left;
+}
+.song{
+  flex-grow: 1;
+}
+.songname{
+  font-size: 34rpx;
+  width: 500rpx;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.songmsg{
+  font-size: 26rpx;
+  color: #a8a9ae;
+  line-height: 50rpx;
+}
+
+.beat{
+  width: 55rpx;
+  height: 40rpx;
+  margin: 0 auto;
+  display: flex;
+}
+.beat icon{
+  width: 6rpx;
+  height: 40rpx;
+  margin: 0 3rpx;
+  background: #ffe41b;
+}
+@keyframes beat{
+  0%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  50%{
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}

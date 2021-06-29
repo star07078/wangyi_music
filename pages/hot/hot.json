@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "playAllSong": "/components/playAllSong/playAllSong"
+  },
+  "navigationBarBackgroundColor": "#242730",
+  "navigationBarTextStyle": "white"
+}

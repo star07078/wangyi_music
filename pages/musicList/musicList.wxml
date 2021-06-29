@@ -1,0 +1,36 @@
+<!--pages/musicList/musicList.wxml-->
+
+<header opacity="{{opacity}}" bg="{{list.color[0]}}">
+  <view>{{list.title}}</view>
+</header>
+
+<scroll-view  lower-threshold="50" bindscroll='pagescroll' scroll-y="true" style="height: 100vh" bindscrolltolower="bottomfn">
+<view class="top" style="background: linear-gradient(to bottom, {{list.color[0]}}, {{list.color[1]}})">
+  <view class="circle" style="background: linear-gradient(to bottom, {{list.color[1]}}, transparent">
+    <view class="wangyi">wangyi</view>
+    <view class="title">{{list.title}}</view>
+  </view>
+</view>
+<view class="list">
+  <playAllSong  bindtap="playAll">
+    <view>共{{list.allList.length}}首歌</view>
+  </playAllSong>
+
+  <view class="musiclist" wx:for="{{items}}" wx:key="index" bindtap="tolyrics" data-id="{{item.id}}" data-title="{{item.name}}" data-imgsrc="{{item.al.picUrl}}"  data-index="{{index}}">
+    <view class="index">
+      <view wx:if="{{item.id != id}}">{{index + 1}}</view>
+      <view class="beat" wx:else>
+        <icon style="animation: beat 1.2s linear infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.3s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.1s infinite;"></icon>
+        <icon style="animation: beat 1.2s linear 0.5s infinite;"></icon>
+      </view>
+    </view>
+    <view class="song">
+      <view class="songname">{{item.name}}{{app}}</view>
+      <view class="songmsg">{{item.ar[0].name || item.song.artists[0].name}}</view>
+    </view>
+    <view class="iconfont {{item.id == id ? 'iconPlaybofang' : 'iconPausezanting'}}" catchtap="playSong" data-id="{{item.id}}" data-title="{{item.name}}" data-index="{{index}}"></view>
+  </view>
+</view>
+</scroll-view>

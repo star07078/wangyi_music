@@ -1,0 +1,8 @@
+<!--pages/songList/songList.wxml-->
+<view class="singer">
+  <view class="item" wx:for="{{list}}" wx:key="index" bindtap="toHot" data-id="{{item.id}}" data-imgsrc="{{item.coverImgUrl}}">
+    <image src="{{item.coverImgUrl}}" bindload="imgLoad" data-num="{{index}}" hidden="{{show[index] ? false: true}}"></image>
+    <image src="/images/me.png" hidden="{{show[index] ? true : false}}"></image>
+    <view>{{item.name}}</view>
+  </view>
+</view>
